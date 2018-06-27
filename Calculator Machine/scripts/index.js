@@ -2,33 +2,31 @@
  * index.js
  * - All our useful JS goes here, awesome!
  */
-/* limpa o display */ 
-// document.getElementById("clear").addEventListener("click", function() {
-// 	document.getElementById("display").value = "";
-// });
 
-
-const calculatorModule = (function(){
-	const clear_btn = getElementById('clear');
+(function(){
 	const display_screen = getElementById('display');
 	const button = getElementByClass('calculator__btn');
 
-	let { value } = display_screen;
-
-	clear_btn.addEventListener('click', () => {
-		value = '';
-	});
-
 	for (var i = 0; i < button.length; i++) {
 		button[i].addEventListener('click', (event) => {
-			value += event.target.value; 
-			display_screen.value = calculates();
+			switch(event.target.value){
+				case '=':
+					display_screen.value = calculates();
+					break;
+				case 'C':
+					display_screen.value = '';
+					break;
+				default:
+					let { value } = display_screen;
+					value += event.target.value; 
+					display_screen.value = value;			
+			}
 		});
 	}
 
 	/* calcula */
 	function calculates() {
-		const temp = value;
+		const temp = display_screen.value;
 		return eval(temp);
 	};
 
