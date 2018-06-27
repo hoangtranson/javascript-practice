@@ -40,4 +40,13 @@ context('Test Calculator Machine', () => {
         cy.get('#clear').click()
         cy.get('#display').should('have.value', '')
     })
+
+    it('Should reset number 5 after finish calculating', () => {
+        cy.get('#seven').click()
+        cy.get('#multiply').click()
+        cy.get('#four').click()
+        cy.get('#equals').click()
+        cy.get('#five').click()
+        cy.get('#display').should('have.value', '5')
+    })
 })

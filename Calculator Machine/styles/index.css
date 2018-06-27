@@ -57,9 +57,6 @@
 	margin: 5px 0 5px 10px;
 	width: 45px;
 }
-.calculator__btn:first-child {
-	margin: 5px 0 5px 10px;
-}
 .calculator__display {
 	outline: none;
 	background-color: var(--background-color);
