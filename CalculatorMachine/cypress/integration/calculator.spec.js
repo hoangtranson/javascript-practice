@@ -49,4 +49,9 @@ context('Test Calculator Machine', () => {
         cy.get('#five').click()
         cy.get('#display').should('have.value', '5')
     })
+
+    it('should have no value on screen at the begining when user click operators', () => {
+        cy.get('#divide').click()
+        cy.get('#display').should('have.value', '')
+    })
 })
