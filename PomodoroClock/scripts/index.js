@@ -42,13 +42,28 @@ const helper = {
 }
 
 const POMORODO_MODULE = (() => {
+    const STOP = 'stop';
+    const RUNNING = 'running';
     const state = {
         brkLength: 5,
         seshLength: 25,
-    }
+        timerState: STOP,
+        intervalID: null,
+        timer: 1500
+    };
 
     const doLengthControl = () => {
 
+    }
+
+    const doTimerControl = () => {
+        if(state.timerState === STOP){
+            beginCountDown();
+            state.timerState = RUNNING;
+        } else {
+            state.timerState = STOP;
+            state.intervalID && state.intervalID.cancel();
+        }
     }
 
     const setBreakLength = () => {
@@ -61,13 +76,42 @@ const POMORODO_MODULE = (() => {
         ele.innerText = state.seshLength;
     }
 
+    const beginCountDown = () => {
+        state.intervalID = setInterval(() => {
+            state.timer = state.timer - 1;
+            check();
+        }, 1000);
+    }
+
     const reset = () => {
 
+    }
+
+    const check = () => {
+        // TODO
     }
 
     setBreakLength();
     setSessionLength();
 })();
+
+//   phaseControl() {
+//     let timer = this.state.timer;
+//     this.warning(timer);
+//     this.buzzer(timer);
+//     if (timer < 0) { 
+//       this.state.timerType == 'Session' ? (
+//         this.state.intervalID && this.state.intervalID.cancel(),
+//         this.beginCountDown(),
+//         this.switchTimer(this.state.brkLength * 60, 'Break')
+//       ) : (
+//         this.state.intervalID && this.state.intervalID.cancel(),
+//         this.beginCountDown(),
+//         this.switchTimer(this.state.seshLength * 60, 'Session')
+//       );
+//     }  
+//   }
+
 // coded by @no-stack-dub-sack (github) / @no_stack_sub_sack (codepen)
 
 /** NOTES:
