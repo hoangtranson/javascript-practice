@@ -1,0 +1,4 @@
+/CalculatorMachine/cypress/fixtures
+/CalculatorMachine/cypress/plugins
+/CalculatorMachine/cypress/support
+/CalculatorMachine/cypress/integration/examples

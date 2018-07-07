@@ -1,0 +1,107 @@
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+
+/* Basic Reset */
+
+:root{
+  --background-color: #495678;
+  --box-shadow: #3d4a65;
+  --color: #dededc;
+}
+
+.calculator__display {
+  --background-color: #98d1dc;
+  --box-shadow: #3facc0;
+}
+
+.calculator__btn--number {
+  --background-color: #72778b;
+  --box-shadow: #5f6680;
+}
+
+.calculator__btn--operator {
+  --background-color: #dededc;
+  --box-shadow: #bebebe;
+  --color: #72778b;
+}
+
+.calculator__btn--other {
+  --background-color: #e3844c;
+  --box-shadow: #e76a3d;
+}
+
+* {
+	border: none;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.calculator {
+	background-color: var(--background-color);
+	box-shadow: 4px 4px var(--box-shadow);
+	margin: 40px auto;
+	padding: 40px 0 30px 40px;	
+	width: 280px;
+}
+.calculator, .calculator__btn, .calculator__display {
+	border-radius: 25px;
+}
+.calculator__btn {
+	outline: none;
+	cursor: pointer;
+	font-size: 20px;
+	height: 45px;
+	margin: 5px 0 5px 10px;
+	width: 45px;
+}
+.calculator__display {
+	outline: none;
+	background-color: var(--background-color);
+	box-shadow: inset 6px 6px 0px var(--box-shadow);
+	color: var(--color);
+	font-size: 20px;
+	height: 47px;
+	text-align: right;
+	width: 165px;
+	padding-right: 10px;
+	margin-left: 10px;
+}
+.calculator__btn--number {
+	background-color: var(--background-color);
+	box-shadow: 0 5px var(--box-shadow);
+	color: var(--color);
+}
+.calculator__btn--number:active {
+	box-shadow: 0 2px var(--box-shadow);
+  	-webkit-transform: translateY(2px);
+  	-ms-transform: translateY(2px);
+  	-moz-tranform: translateY(2px);
+  	transform: translateY(2px);
+}
+.calculator__btn--operator {
+	background-color: var(--background-color);
+	box-shadow: 0 5px var(--box-shadow);
+	color: var(--color);
+}
+.calculator__btn--operator:active {
+	box-shadow: 0 2px var(--box-shadow);
+  	-webkit-transform: translateY(2px);
+  	-ms-transform: translateY(2px);
+  	-moz-tranform: translateY(2px);
+  	transform: translateY(2px);
+}
+.calculator__btn--other {
+	background-color: var(--background-color);;
+	box-shadow: 0 5px var(--box-shadow);
+	color: var(--color);
+}
+.calculator__btn--other:active {
+	box-shadow: 0 2px var(--box-shadow);
+  	-webkit-transform: translateY(2px);
+  	-ms-transform: translateY(2px);
+  	-moz-tranform: translateY(2px);
+  	transform: translateY(2px);
+}
