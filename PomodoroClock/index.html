@@ -1,17 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  
+
   <!--  Meta  -->
   <meta charset="UTF-8" />
   <title>Build a Pomodoro Clock</title>
-  
+
   <!--  Styles  -->
   <link rel="stylesheet" href="styles/index.css">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-  
+  <div class="pomodoro">
+    <div class="pomodoro__title">Pomodoro Clock</div>
+
+    <div class="pomodoro__control">
+      <div>Break Length</div>
+      <button id="break-decrement" class="btn" value="-">
+        <i class="fa fa-arrow-down fa-2x"></i>
+      </button>
+      <div id="break-length" class="btn">5</div>
+      <button id="break-increment" class="btn" value="+">
+        <i class="fa fa-arrow-up fa-2x"></i>
+      </button>
+    </div>
+    <div class="pomodoro__control">
+      <div>Session Length</div>
+      <button id="session-decrement" class="btn" value="-">
+        <i class="fa fa-arrow-down fa-2x"></i>
+      </button>
+      <div id="session-length" class="btn">25</div>
+      <button id="session-increment" class="btn" value="+">
+        <i class="fa fa-arrow-up fa-2x"></i>
+      </button>
+    </div>
+
+    <div class="pomodoro__timer">
+      <div class="pomodoro__timer__screen">
+        <div id="timer-label">Session</div>
+        <div id="timer-left">25:00</div>
+      </div>
+      <div class="pomodoro__timer__control" id="start_stop">
+        <button class="btn">
+          <i class="fa fa-play fa-2x"></i>
+          <!-- <i class="fa fa-pause fa-2x"></i> -->
+        </button>
+        <button class="btn" id="reset">
+          <i class="fa fa-refresh fa-2x"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <audio id="beep" preload="auto" src="https://goo.gl/65cBl1"></audio>
   <!--
 
     Wow! What do you want to build?
@@ -20,8 +62,9 @@
     How about a simple folio page to show off everything you're going to make!
    
   -->
-  
+
   <!-- Scripts -->
   <script src="scripts/index.js"></script>
 </body>
+
 </html>

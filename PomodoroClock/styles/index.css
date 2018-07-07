@@ -3,19 +3,35 @@
  * - Add any styles you want here!
  */
 
-body {
-  background: #f5f5f5;
-}
+ .pomodoro{
+   width: 500px;
+   margin: 0 auto;
+ }
+ .pomodoro .pomodoro__title{
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+ }
 
-.container{
-  padding: 48px 60px 48px 60px;
-  background-color: #eee;
-}
+ .pomodoro .pomodoro__control{
+  display: inline-block;
+  width: 248px;
+  text-align: center;
+ }
 
-.container h1{
-  font-size: 63px;
-}
+ .pomodoro .pomodoro__timer .pomodoro__timer__screen{
+  text-align: center;
+  padding: 20px 0 20px 0;
+ }
 
-.container h2{
-  font-size: 30px;
-}
+ .pomodoro .pomodoro__timer .pomodoro__timer__control{
+  text-align: center;
+ }
+
+ .btn{
+   display: inline-block;
+   background: none;
+   outline: none;
+   border: none;
+   cursor: pointer;
+ }
